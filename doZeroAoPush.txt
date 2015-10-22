@@ -1,0 +1,51 @@
+##Do Zero ao Push##
+
+
+Instalar o git bash em sua máquina.
+Abrir o terminal git bash.
+
+###Primeiro Passos no git bash###
+
+git                                                            - Ao digitar este comando será aprestado as configurações básicas do git bash.    
+git config --global user.name "Escreva seu nome aqui"          - Ao digitar este comando, será criado um usuário na tela do git bash com seu nome. 
+git config --global user.email "Escreva seu email nome aqui"   - Ao digitar este comando, será criado um email  na tela do git bash com seu email.
+git config --global color.ui treu                              - Ao digitar este comando, o git bash colorira os textos no git bash.  
+
+###Segundo  Passos no git bash###
+ 
+mkdir nome_do_diretório                                        - O seguinte comando cria um pasta, que chamamos de diretório.
+CD nome_do_arquivo                                             - Comando para acessar o diretório
+git init                                                       - Comando que inicia e cria a extensão .git
+LS -LA                                                         -  Apresenta  uma lista de todos os arquivos existentes.
+touch nome_do_arquivo.txt                                      - Comando que cria uma arquivo e sua extensão
+vim nome_do_arquivo.txt                                        - Abri, edita e salva o arquivo
+
+###Terceiro Passo no git hub###
+
+git status                                                     - Comando que mostra o estado 1 de arquivos que serão commitados
+git add nome_do_arquivo.txt                                    - Comando que adiciona o arquivo ao estado de pronto pra commitar
+git commit -m 'Texto que identifica esse commit'               - Realiza o commit na sua totalidade
+
+###Quarto Passo no git bash###
+
+OBS: 
+É necessário criar uma conta no github antes de realizar os passos seguintes!!
+Para criamos um repositório remoto é necessário criar e configurar o arquivo/pasta README.md. 
+
+touch README.md                                                - O seguinte comando cria um arquivo e sua extensão.
+git init                                                       - Comando que inicia e cria a extensão .git
+git add README.md                                              - Comando que adiciona o arquivo ao estado de pronto pra commitar
+git commit -m 'Texto que identifica esse commit'               - Realiza o commit na sua totalidade
+git remote add origin  https://github.com/nome_do_git/git-nome_do_repositório.git
+vim .git/config                                                - Este comando abre o arquivo com as configurações do git
+
+###Quarto Passo no git bash###
+
+git checkout -b nom_do_branch                                  - Comando que cria um branch mais você já possui um o master
+git push origin nome_do_branch                                 - Comando que empurra o branch para o repositório remoto
+git checkout -b nome_do_branch_local origin/nome_do_branch     - Comando que cria um branch local e recebe os dados do branch remoto
+
+###Quinto Passo git bash###
+git pull origin master                                         - Comando que baixa um branch neste caso o master
+   
+

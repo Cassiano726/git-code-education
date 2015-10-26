@@ -22,3 +22,12 @@ git tag -l                                                     - Lista quantas t
 git push origin master  --tags                                 - Coamando para subir uma tag no github criando um release
 git tag -d 0.1.0                                               - Comando para remover tags locais
 git push origin :refs/tags/0.1.0                               - Comando para remover tags remotas                                   
+### Fase 2.1 do Projeto###
+
+Criando um repositóeio BARE
+
+Comandos:
+
+mkdir nome_do_bare                                            - Comando que cria um repositório
+cd    nome_do_bare                                            - Comando que acessa um direto
+git init --bare                                               - Comando que inicializa e cria um repositório tipo bare

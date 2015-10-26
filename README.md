@@ -31,3 +31,9 @@ Comandos:
 mkdir nome_do_bare                                            - Comando que cria um repositório
 cd    nome_do_bare                                            - Comando que acessa um direto
 git init --bare                                               - Comando que inicializa e cria um repositório tipo bare
+
+### Fase 2.1.1 do Projeto###
+
+Craindo link com repositórtio remoto apontando para o Bare
+
+git remote add local ssh://local/host/Users/cassiano/gitcode/aulagit.git master -Descrição acima.

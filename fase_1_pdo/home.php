@@ -1,5 +1,5 @@
 <p>
-    Bem vindo!.<br> Para aproveitar tudo que o site pode ofereçer!
+    Bem vindo!.<br> No Boletin Online, você pode ver a lista de alunos aprovados e o Ranking dos alunos com as melhores notas!
 </p>
 
 

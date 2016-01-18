@@ -9,7 +9,7 @@
                 <label>Usuário:<input type="text" name="usuario" autofocus=""></label>
             <label>Senha:<input type="password" name="senha" autofocus=""></label>
             <label>
-                <input type="submit" name="enviar" value="enviar">
+                <input type="submit" name="logar" value="logar"><!--O submit que o sistema esta pegando é esse -->
                 <input type="reset" name="limpar" value="limpar">
             </label>
             </fieldset>

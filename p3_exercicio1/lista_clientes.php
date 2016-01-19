@@ -1,16 +1,11 @@
-<?php
-session_start(); /*Página com sessão iniciada*/
-echo '<hear>';
-//echo'<meta http-equiv="refresh" content="10">';
-echo '</hear>';
-?>
-
-<?php  if(isset($_SESSION["logado"])):?>
 
 <!--Criar o loop com os clientes criados via $_COOKIE -->
 
     <?php
-
+   
+    
+    
+    
     
             if (isset($_POST['enviar'])) {
                 setcookie("dados[ID]", $_POST['id'],  time()+3600);
@@ -18,7 +13,7 @@ echo '</hear>';
                 setcookie("dados[EMAIL]",$_POST['email'], time()+3600);
 
                 if (isset($_COOKIE['dados'])) {
-                    
+                    echo '<p><b>Cliente:</b></p>';
                     echo '<ul><li>ID :'.$_POST['id'].'<br/></li></ul>';
                     echo '<ul><li>NOME :'.$_POST['nome'].'<br/></li></ul>';
                     echo '<ul><li>EMAIL :'.$_POST['email'].'<br/></li></ul>';
@@ -28,9 +23,26 @@ echo '</hear>';
                     foreach ($_COOKIE['dados'] as $key => $value) {
                         echo '<body><ul><li>'."$key : $value".'<br/></li></ul></body>';
                     }
+                    echo "<br/>*********        Novo Cliente            ********<br/>";
                 }
-            } elseif (isset($_POST['enviar']) == NULL || isset($_POST['enviar']) == " ") {
+            } 
+            
+            /*Verifica se foi transmitido valores do formulário. Se não achar nada apresenta a lista com os dois ultimos clientes*/
+            elseif (isset($_POST['enviar']) == NULL || isset($_POST['enviar']) == " ") {
+                
+                
+                if (isset($_COOKIE['dados'])) {
+                                                                             
+                    echo '<p><b>Cliente:</b></p>';
+                                                       
+                    foreach ($_COOKIE['dados'] as $key => $value) {
+                        echo '<body><ul><li>'."$key : $value".'<br/></li></ul></body>';
+                    }
+                    echo "<br/>*********        Novo Cliente            ********<br/>";
+                    
+                }
                
+                /*
                 if($_COOKIE['dados'] == null || $_COOKIE['dados'] == " "){
                     echo '<ul><li>'.$_POST['id'].'<br/></li></ul>';
                     echo '<ul><li>'.$_POST['nome'].'<br/></li></ul>';
@@ -41,7 +53,9 @@ echo '</hear>';
                         echo '<body><ul><li>'."$key : $value".'<br/></li></ul></body>';
                     }
                 }
-                  //echo 'ID:' . $_POST['id'] = " " . '<br/>NOME' . $_POST['nome'] = "" . '<br/>EMAIL' . $_POST['email'] = "";
+                  echo 'ID:' . $_POST['id'] = " " . '<br/>NOME' . $_POST['nome'] = "" . '<br/>EMAIL' . $_POST['email'] = "";
+                 * 
+                 */
             }
      /*       
     $my_stack = array();//criei o array
@@ -130,6 +144,4 @@ echo '</hear>';
 <br>
 <a href="index.php?page=cadastro"><input type="button"  name="cadastro" value="cadastro"></a>
 <!--<a href="cadastro.php">Novo Cadastro</a> -->
-<?php else:?>
-<p>Por favor! Realize seu login no sistema!  </p>
-<?php endif; ?>
+    

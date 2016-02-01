@@ -1,4 +1,4 @@
-#barra   {padding-left: 10px;height: 30px;line-height: 30px;margin-top: 10px;background-color: #5d87c7; border-radius: 6px 6px 0 0; -webkit-border-radius:6px 6px 0 0 ; -moz-border-radius:6px 6px 0 0 ; position: relative}
+#barra {padding-left: 10px;height: 30px;line-height: 30px;margin-top: 10px;background-color: #5d87c7; border-radius: 6px 6px 0 0; -webkit-border-radius:6px 6px 0 0 ; -moz-border-radius:6px 6px 0 0 ; position: relative}
 
 #busca {text-align: right;position: absolute; right: 0;top:0; padding-right:10px;}
 .btnBusca {height: 25px; width: 50px;}
